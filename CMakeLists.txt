@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
 project(DapperDasher VERSION 1.0 LANGUAGES CXX)
 
-# Ustaw standard C++ (opcjonalne, ale zalecane dla raylib)
+
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -18,7 +18,12 @@ FetchContent_MakeAvailable(raylib)
 
 # Dodaj executable z plików w src/
 add_executable(${PROJECT_NAME}
-        src/main.cpp  # Dodaj tu inne pliki: src/other.cpp
+        src/main.cpp
+        include/Game.cpp
+        include/Game.hpp
+        include/Constans.hpp
+        include/Grid.cpp
+        include/Grid.hpp  # Dodaj tu inne pliki: src/other.cpp
 )
 
 # Nagłówki z include/
@@ -32,7 +37,7 @@ if (WIN32)
     set_target_properties(${PROJECT_NAME} PROPERTIES
             WIN32_EXECUTABLE TRUE
     )
-endif()
+endif ()
 
 # Opcjonalnie: zainstaluj (make install)
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
