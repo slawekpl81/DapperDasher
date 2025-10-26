@@ -13,6 +13,11 @@ constexpr int SCREEN_WIDTH = 800;
 constexpr int SCREEN_HEIGHT = 600;
 constexpr int FPS = 45;
 
+// Dla kamery
+constexpr float CAMERA_SPEED = 200.0f; // Prędkość przesuwania (px/s)
+constexpr bool CAMERA_FOLLOW_PLAYER = true; // Opcja: follow z lerp (0.1f smooth)
+constexpr float CAMERA_LERP_SPEED = 0.1f; // Smooth follow (0.0-1.0)
+
 // Stałe dla gridu/mapy (z poprzednich dyskusji)
 constexpr int GRID_WIDTH = 200;
 constexpr int GRID_HEIGHT = 200;
