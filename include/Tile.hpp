@@ -8,16 +8,17 @@
 #include "Constans.hpp"
 
 class Tile {
-private:
+public:
     int _x;
     int _y;
     TileType _type;
     bool _collidable;
 
-public:
     Tile(int x, int y, int type);
 
     void Draw() const;
+
+    bool isCollidable() const;
 };
 
 

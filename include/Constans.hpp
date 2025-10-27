@@ -22,6 +22,7 @@ constexpr float CAMERA_LERP_SPEED = 0.1f; // Smooth follow (0.0-1.0)
 constexpr int GRID_WIDTH = 200;
 constexpr int GRID_HEIGHT = 200;
 constexpr float TILE_SIZE = 16.0f;
+constexpr std::string GRID_FILE_DATA = "grid_data.txt";
 
 // Stałe dla gracza i ruchu
 constexpr float PLAYER_SPEED = 100.0f;
@@ -32,7 +33,7 @@ constexpr int MAX_RESOURCES_SPAWN = 20;
 constexpr int BASE_RESOURCE_AMOUNT = 3;
 
 // Enumy (też tu, dla spójności)
-enum class  TileType { GRASS = 0, STONE = 1, WATER = 2, SAND = 3 };
+enum class TileType { GRASS = 0, STONE = 1, WATER = 2, SAND = 3 };
 
 enum ResourceType { TREE = 0, STONE = 1, BERRY_BUSH = 2 };
 

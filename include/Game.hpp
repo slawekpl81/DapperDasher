@@ -4,8 +4,10 @@
 
 #ifndef DAPPERDASHER_GAME_HPP
 #define DAPPERDASHER_GAME_HPP
-#include <string>
 
+#include <memory>
+#include <string>
+#include "Grid.hpp"
 
 class Game {
 private:
@@ -15,8 +17,12 @@ private:
     int _fps;
     int _current_fps;
 
+    Camera2D _camera;
+
     bool _debug_mode;
     std::string _debug_text;
+
+    std::unique_ptr<Grid> _grid;
 
 public:
     Game();
@@ -25,7 +31,7 @@ public:
 
     void Update();
 
-    void Draw() const;
+    void Draw();
 
     void CloseGame();
 

@@ -53,3 +53,6 @@ void Tile::Draw() const {
     }
 }
 
+bool Tile::isCollidable() const {
+    return _collidable;
+}
