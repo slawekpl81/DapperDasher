@@ -23,7 +23,9 @@ add_executable(${PROJECT_NAME}
         include/Game.hpp
         include/Constans.hpp
         include/Grid.cpp
-        include/Grid.hpp  # Dodaj tu inne pliki: src/other.cpp
+        include/Grid.hpp
+        include/Tile.cpp
+        include/Tile.hpp  # Dodaj tu inne pliki: src/other.cpp
 )
 
 # Nagłówki z include/

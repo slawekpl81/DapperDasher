@@ -32,7 +32,7 @@ constexpr int MAX_RESOURCES_SPAWN = 20;
 constexpr int BASE_RESOURCE_AMOUNT = 3;
 
 // Enumy (też tu, dla spójności)
-enum TileType { GRASS = 0, WALL = 1, WATER = 2, CHEST = 3 };
+enum class  TileType { GRASS = 0, STONE = 1, WATER = 2, SAND = 3 };
 
 enum ResourceType { TREE = 0, STONE = 1, BERRY_BUSH = 2 };
 
