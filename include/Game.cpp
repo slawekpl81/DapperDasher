@@ -16,7 +16,7 @@ Game::Game() {
     _screen_height = SCREEN_HEIGHT;
     _fps = FPS;
 
-    Camera2D _camera;
+    _camera = {0};
     _camera.offset = {
         static_cast<float>(SCREEN_WIDTH) / 2.0f, static_cast<float>(SCREEN_HEIGHT) / 2.0f
     }; // Środek ekranu
@@ -72,10 +72,11 @@ void Game::Update() {
     // }
 
     // Ogranicz kamerę do granic mapy
-    float halfMapW = (GRID_WIDTH * TILE_SIZE) / 2.0f;
-    float halfMapH = (GRID_HEIGHT * TILE_SIZE) / 2.0f;
-    _camera.target.x = Clamp(_camera.target.x, halfMapW, GRID_WIDTH * TILE_SIZE - halfMapW);
-    _camera.target.y = Clamp(_camera.target.y, halfMapH, GRID_HEIGHT * TILE_SIZE - halfMapH);
+    // float halfMapW = (GRID_WIDTH * TILE_SIZE) / 2.0f;
+    // float halfMapH = (GRID_HEIGHT * TILE_SIZE) / 2.0f;
+    // _camera.target.x = Clamp(_camera.target.x, halfMapW, GRID_WIDTH * TILE_SIZE - halfMapW);
+    // _camera.target.y = Clamp(_camera.target.y, halfMapH, GRID_HEIGHT * TILE_SIZE - halfMapH);
+    _debug_text += std::format("CAMERA TARGET: x{},y{}", _camera.target.x, _camera.target.y);
 }
 
 void Game::Draw() {
@@ -88,7 +89,7 @@ void Game::Draw() {
     if (_debug_mode) {
         // std::string fps_text = std::format("FPS: {}", _current_fps);
         // DrawText(fps_text.c_str(), 5, _screen_height - 20, 15, RED);
-        DrawDebugText(_debug_text, 5, 5, 15,RED);
+        DrawDebugText(_debug_text, 5, 5, 15, RED);
     }
     DrawText("Hello, Raylib from CMake!", 190, 200, 20, LIGHTGRAY);
 

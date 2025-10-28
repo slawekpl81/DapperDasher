@@ -14,7 +14,7 @@ constexpr int SCREEN_HEIGHT = 600;
 constexpr int FPS = 45;
 
 // Dla kamery
-constexpr float CAMERA_SPEED = 200.0f; // Prędkość przesuwania (px/s)
+constexpr float CAMERA_SPEED = 10.0f; // Prędkość przesuwania (px/s)
 constexpr bool CAMERA_FOLLOW_PLAYER = true; // Opcja: follow z lerp (0.1f smooth)
 constexpr float CAMERA_LERP_SPEED = 0.1f; // Smooth follow (0.0-1.0)
 
